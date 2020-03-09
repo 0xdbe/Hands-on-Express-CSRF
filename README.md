@@ -4,6 +4,12 @@ This application is a demonstration prototype just to show how to perform CSRF a
 
 ## Setting-up
 
+### Deploy on heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/0xdbe/Hands-on-Express-CSRF)
+
+### Deploy on your host
+
 * Install nodejs
 
 * Install dependencies
@@ -18,7 +24,7 @@ $ npm install
 $ node app.js
 ```
 
-## CSRF attack
+## Tutorial
 
 * Victim must be log in http://localhost:3000
 
