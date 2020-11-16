@@ -17,6 +17,9 @@ const sqlite3 = require('sqlite3');
 // Create an express application
 const app = express();
 
+// Enable trust proxy to use Secure cookie
+app.set('trust proxy', 1)
+
 // Cookie settings for CSRF hands-on
 const cookieConfig = {
   path: '/', 
