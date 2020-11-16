@@ -21,7 +21,7 @@ const app = express();
 const cookieConfig = {
   path: '/', 
   httpOnly: true,
-  secure: false,
+  secure: true,
   maxAge: 600000,
   sameSite: 'none'
 };
@@ -61,6 +61,7 @@ app.get('/', (req, res) => {
   
   if(session.username){
     // User already log in
+    console.log(session.username);
     res.redirect("/account");
   }else{
     res.redirect("/login");
@@ -74,7 +75,7 @@ app.get('/account', (req, res) => {
   // Get current session
   let session = req.session;
   
-  if(session.username){  
+  if(session.username){
     let content = viewAccount({name: session.username});
     res.send(content);
   }else{
